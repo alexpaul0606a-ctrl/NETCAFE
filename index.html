@@ -10,6 +10,9 @@
 
 <link rel="manifest" href="manifest.json">
 
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="icon-192.png">
+
 <style>
 body{
 min-height:100vh;
@@ -39,11 +42,32 @@ border-radius:12px;
 padding:10px;
 margin-bottom:10px;
 }
+
+/* SPLASH */
+#splash{
+position:fixed;
+width:100%;
+height:100%;
+background:#ffffff;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+#splash img{
+width:150px;
+}
 </style>
 
 </head>
 
 <body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash">
+  <img src="netcafe.png" alt="logo">
+</div>
 
 <div class="card shadow p-4 text-center bg-white">
 
@@ -51,23 +75,18 @@ margin-bottom:10px;
 
 <p class="text-muted">আমরা আপনাকে সাহায্য করতে প্রস্তুত</p>
 
-<!-- SUPPORT BUTTONS -->
-<a href="https://wa.me/8801748637690" 
-class="btn btn-success w-100 mb-2">
+<a href="https://wa.me/8801748637690" class="btn btn-success w-100 mb-2">
 💬 হোয়াটসঅ্যাপ সাপোর্ট
 </a>
 
-<a href="https://www.facebook.com/netcafedivisionalisp" 
-class="btn btn-primary w-100 mb-2">
+<a href="https://www.facebook.com/netcafedivisionalisp" class="btn btn-primary w-100 mb-2">
 📩 মেসেঞ্জার সাপোর্ট
 </a>
 
-<a href="tel:+8801748637690" 
-class="btn btn-dark w-100 mb-3">
+<a href="tel:+8801748637690" class="btn btn-dark w-100 mb-3">
 📞 এখনই কল করুন
 </a>
 
-<!-- PACKAGE SECTION -->
 <h5 class="mt-3 mb-2">📶 আমাদের প্যাকেজসমূহ</h5>
 
 <div class="package">
@@ -88,18 +107,14 @@ Speed: 30 Mbps <br>
 Price: 1000 টাকা
 </div>
 
-  <!-- BKASH -->
 <h5 class="mt-3 mb-2">💰 বিকাশ পেমেন্ট</h5>
 
 <div class="package text-center">
-📱 নাম্বার: <b id="bkashNumber">01622280960</b><br>
+📱 নাম্বার: <b>01622280960</b><br>
 💵 পেমেন্ট: Merchant<br>
 📝 রেফারেন্স: আপনার ID
-<br>
-
 </div>
 
-<!-- INSTALL BUTTON -->
 <button class="btn btn-outline-secondary w-100 mt-3" id="installBtn">
 ⬇ অ্যাপ ইন্সটল করুন
 </button>
@@ -119,6 +134,13 @@ if(deferredPrompt){
 deferredPrompt.prompt();
 await deferredPrompt.userChoice;
 }
+});
+
+// splash hide
+window.addEventListener("load", () => {
+setTimeout(()=>{
+document.getElementById("splash").style.display = "none";
+},1500);
 });
 
 // service worker
