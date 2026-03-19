@@ -7,14 +7,10 @@
   "theme_color": "#0d6efd",
   "icons": [
     {
-      "src": "netcafe.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "netcafe.png",
+      "src": "app-netcafe.png",
       "sizes": "512x512",
       "type": "image/png"
-    }
+    },
+    
   ]
 }
