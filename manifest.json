@@ -1,12 +1,13 @@
 {
   "name": "NETCAFE",
   "short_name": "NETCAFE",
+  "id": "netcafe-v2",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f6f6f6",
-  "theme_color": "#f6f6f6",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
   "icons": [
-
     {
       "src": "netcafe192.png",
       "sizes": "192x192",
